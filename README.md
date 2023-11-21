@@ -24,7 +24,7 @@ What suggestions do you have for next steps?
 
 #### Outline of project
 
-- [Link to notebook 1]()
+- [Notebook 1](https://github.com/mohangunturu/application-final/blob/main/prompt.ipynb)
 - [Link to notebook 2]()
 - [Link to notebook 3]()
 
