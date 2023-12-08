@@ -117,6 +117,7 @@ accuracy                           0.97        29
 </code></pre>
 <p>macro avg       0.97      0.96      0.96        29
 weighted avg       0.97      0.97      0.97        29</p>
+</code></pre>
 
 *  <p>Precision is the ratio of correctly predicted positive observations to the total predicted positives, recall is predicted observations on total actual postives. Decision tree performed much better compared to other modesl with accuracy of 100% and follwed by the rest of the models with accuracy of 97%. </p>
 
