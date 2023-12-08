@@ -2,10 +2,10 @@
 
 MG
 
-#### Executive summary
+### Executive summary
 This research is going to help couples proactively to prevent/fix/take necessary steps to avoid divorce based on their answers to the questions in the dataset.
 
-#### Rationale
+### Rationale
 
 Families serve as the foundational units of society, playing a crucial role in the well-being and development of individuals. Here are several reasons why supporting and nurturing families is essential for the stability and success of society:
 
@@ -17,23 +17,17 @@ Families serve as the foundational units of society, playing a crucial role in t
 * Economic Stability:Strong families contribute to economic stability. Supportive family structures can provide financial stability, allowing individuals to focus on personal and professional development.
 * Community Building:Families are building blocks for communities. Strong families contribute to the development of healthy and supportive communities.
 
-#### Research Question
+### Research Question
 This research will help couples to predict the success rate of their marriage and help them proactively.
 
-#### Data Sources
+### Data Sources
 
 This the dataset that was collected from Kaggle from the the below url.
 
 https://www.kaggle.com/datasets/andrewmvd/divorce-prediction
 
-#### Methodology
+### Methodology
 I have used data exploration, data analysis, data cleaning, visualizations, handling missing and duplicate values, splitting the train and test data, and finally modeling by using regression models and classification models.
-
-#### Results
-My research finds that data helps to predict the divorces with above 90% of accuracy given a spouse answers the questions unbiased.
-
-#### Next steps
-Analyze this with more visualizations on overfitting, underfitting, bias and variance, other techniques to achieve best accuracy
 
 #### Outline of project
 The following steps are performed on this data.
@@ -200,7 +194,7 @@ Confusion Matrix:</br>
 ### Deep Learning
 <p> I have applied Sequential and LSTM networks, LSTM performed better with MSE 0% with 98% of explainable of variance.</p>
 
-### Winner: 
+### Results: 
 <p> LSTM and Logistic Regression are the best models for predicting the divorce close to 98% of the time with the 10 features that were selected. </p>
 Below are 10 features. Select one option for each question to attain a predictive accuracy of 98% in predicting divorces using two widely-used and models that we explored out of many algorithms: Logistic Regression and LSTM network.
 
@@ -219,37 +213,41 @@ All responses were collected on a 5 point scale (0=Never, 1=Seldom, 2=Averagely,
 
 ### Next Steps and Recommendations
 
+* Visualizations:
+    * I like to visualize more on overfitting, underfitting, bias and variance, other techniques to understand better
+
 * Evaluate Model Performance:
 
-    * Assess the performance of your predictive models (Logistic Regression and LSTM network). Use metrics such as accuracy, precision, recall, and F1 score to understand how well the models are performing on the task of predicting divorces.
+    * I want to assess the  performance of these predictive models (Logistic Regression and LSTM network). Use metrics such as accuracy, precision, recall, and F1 score to understand how well the models are performing on predicting divorces.
 
 * Feature Importance Analysis:
 
-    * Conduct a feature importance analysis to understand which features have the most significant impact on the predictions. This can provide insights into the factors influencing divorce predictions.
+    * I like to explore through feature importance analysis to understand which features have the most significant impact on the predictions. This can provide insights into the factors influencing divorce predictions.
 
 * Model Interpretability:
 
-    * If possible, enhance the interpretability of your models. Understand the reasons behind specific predictions, especially if the models will be used in a real-world setting where interpretability is crucial.
+    * I want to enhance the interpretability of these models to understand the reasons behind specific predictions.
+      
 * Error Analysis:
 
-    * Analyze model errors and misclassifications. Identify patterns or trends in instances where the models are struggling to make accurate predictions. This can guide improvements to the models or data collection process.
+    * I like to analyze model errors and misclassifications. Identify patterns or trends in instances where the models are struggling to make accurate predictions, it may offer insights to get more data points.
 * Fine-Tuning and Optimization:
 
-    * Fine-tune your models based on the insights gained from the evaluation and analysis. Consider adjusting hyperparameters, experimenting with different feature sets, or exploring advanced techniques to optimize model performance.
+    * I like to fine-tune these models based on the insights gained from the evaluation and analysis.(Ex: adjusting hyperparameters, experimenting with different feature sets, or exploring advanced techniques to optimize model performance).
 
 * Validation on New Data:
 
-    * Validate your models on new, unseen data to ensure that they generalize well. This step is crucial to confirm that the models are not overfitting to the training data.
-
+    * I want to validate these models on new, unseen data to ensure that they generalize well, so that we can make sure the model is not overfitting.
 * Deployment Strategy:
 
-    * If applicable, plan the deployment of your models. Consider the infrastructure, integration with existing systems, and any ethical considerations associated with the use of predictive models.
+    * I want to create deployment strategy of my models. May be AWS or something else, I will leverage for this
 * Continuous Monitoring:
 
-    * Implement a system for continuous monitoring of model performance. Models may need periodic updates as data distributions change or as new patterns emerge.
+    * I want to establish continuous monitoring of these models performance.
+      
 * Feedback Loop:
 
-    * Establish a feedback loop with end-users or stakeholders. Gather feedback on the model's predictions and iterate on improvements based on real-world experiences.
+    * I want establish a feedback loop with end-users :) . 
 
 
 #### Please find the link below to codebase.
