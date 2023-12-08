@@ -192,7 +192,26 @@ Confusion Matrix:</br>
 <p> I have also performed time calculations on these models, Random Forest Regressor and Decision tree classifier are the better models with less time and close to actual values in predictions </p>
 
 ### Deep Learning
-<p> I have applied Sequential and LSTM networks, LSTM performed better with MSE 0% with 98% of explainable of variance.</p>
+<p> I have applied Sequential and LSTM networks, LSTM performed better with MSE 0% with more than 99% of explainable of variance. This network 3 layers, 243 neurons and, 27049 parameters.</p>
+1/1 [==============================] - 0s 56ms/step
+Mean Squared Error (MSE): 0.00
+R-squared (R2): 0.99
+Model: "sequential_1"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ lstm (LSTM)                 (None, 50)                12200     
+                                                                 
+ dense_3 (Dense)             (None, 128)               6528      
+                                                                 
+ dense_4 (Dense)             (None, 64)                8256      
+                                                                 
+ dense_5 (Dense)             (None, 1)                 65        
+                                                                 
+=================================================================
+Total params: 27049 (105.66 KB)
+Trainable params: 27049 (105.66 KB)
+Non-trainable params: 0 (0.00 Byte)
 
 ### Results: 
 <p> LSTM and Logistic Regression are the best models for predicting the divorce close to 98% of the time with the 10 features that were selected. </p>
