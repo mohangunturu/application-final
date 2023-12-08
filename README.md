@@ -69,7 +69,7 @@ The following steps are performed on this data.
    * LSTM and Dense
 
 #### Summary and Interpretation of Models:
-* Features: I have applied correlation and Random forest classifier to select the features that compares target variable with all the features. I have picked top 10 features that predicts that explains atleast 90% variance. Using these top 10 features, I have analyzed the data with several models and compared the performance.
+* Features: I have applied correlation and Random forest classifier to select the features that compares target variable with all the features. I have picked top 10 features that predicts that explains at least 90% variance. Using these top 10 features, I have analyzed the data with several models and compared the performance.
 ### Regression Models
   * I have applied Linear, Random forest, Polynomial and SV Regression algorithms.
   ### Results
@@ -126,33 +126,38 @@ weighted avg       0.97      0.97      0.97        29</p>
 <p>
 *  Precision is the ratio of correctly predicted positive observations to the total predicted positives, recall is predicted observations on total actual postives. Decision tree performed much better compared to other modesl with accuracy of 100% and follwed by the rest of the models with accuracy of 97%. </p>
 
+</code></pre>
+
+
+
+
 ### Cross Validation
 
-<p>Regression Results:
-Model  R2 (Mean)  R2 (Std)
-0         Linear Regression   0.918330  0.018782
-1  Random Forest Regression   0.921108  0.054572
-2     Polynomial Regression   0.711600  0.120574
+<p>Regression Results:</p>
+<p>                    Model  R2 (Mean)  R2 (Std)</br>
+0         Linear Regression   0.918330  0.018782</br>
+1  Random Forest Regression   0.921108  0.054572</br>
+2     Polynomial Regression   0.711600  0.120574</br>
 3            SVR Regression   0.907840  0.026842</p>
 Random Forest is able to explain 92% of variance, and it has lowest standard deviation suggests the model is better than all other regressions.
-<p>Classification Results:
-Model  Accuracy (Mean)  Accuracy (Std)
-0  Logistic Regression Classification         0.982609        0.021300
-1        Random Forest Classification         0.973913        0.034783
-2        Decision Tree Classification         0.965217        0.032536
+<p>Classification Results:</br>
+Model  Accuracy (Mean)  Accuracy (Std)</br>
+0  Logistic Regression Classification         0.982609        0.021300</br>
+1        Random Forest Classification         0.973913        0.034783</br>
+2        Decision Tree Classification         0.965217        0.032536</br>
 3                  SVC Classification         0.982609        0.021300</p>
 
 <p>SVC and Logistic Regression performed better with highest accuracy of predicting the outcomes than other models, suggests that this is a better classification model for this data. 98% of the time, the predictions are correct.</p>
 
 ### Grid Search Hyper Parameters Tuning
 There are several paramters that were tried and finally, the best parameters for both regression and classifications are below.
-<p>Best Hyperparameters (Linear Regression): {'fit_intercept': True}
-Best Hyperparameters (Random Forest Regression): {'max_depth': 20, 'n_estimators': 200}
-Best Hyperparameters (Polynomial Regression): {'max_depth': 20, 'n_estimators': 200}
-Best Hyperparameters (SVR Regression): {'max_depth': 20, 'n_estimators': 200}
-Best Hyperparameters (Logistic Regression): {'C': 1}
-Best Hyperparameters (Random Forest Classification): {'max_depth': None, 'n_estimators': 50}
-Best Hyperparameters (Decision Tree Classification): {'criterion': 'gini', 'max_depth': None, 'min_samples_leaf': 4, 'min_samples_split': 5}
+<p>Best Hyperparameters (Linear Regression): {'fit_intercept': True}</br>
+Best Hyperparameters (Random Forest Regression): {'max_depth': 20, 'n_estimators': 200}</br>
+Best Hyperparameters (Polynomial Regression): {'max_depth': 20, 'n_estimators': 200}</br>
+Best Hyperparameters (SVR Regression): {'max_depth': 20, 'n_estimators': 200}</br>
+Best Hyperparameters (Logistic Regression): {'C': 1}</br>
+Best Hyperparameters (Random Forest Classification): {'max_depth': None, 'n_estimators': 50}</br>
+Best Hyperparameters (Decision Tree Classification): {'criterion': 'gini', 'max_depth': None, 'min_samples_leaf': 4, 'min_samples_split': 5}</br>
 Best Hyperparameters (SVC Classification): {'C': 0.1, 'degree': 2, 'gamma': 'auto', 'kernel': 'rbf'}</p>
 
 ### Ensemble Techniques
@@ -160,18 +165,18 @@ Regressors:
 Mean Squared Error (MSE): 0.07
 R-squared (R2): 0.73
 <p>Voter Regressor has a MSE of 7% with 73% of explained variance</p>
-               Regressor       MSE        R2  Training Time (s)
-0       LinearRegression  0.029111  0.879987           0.000559
-1  RandomForestRegressor  0.020214  0.916668           0.037138
-2               Pipeline  0.519156 -1.140244           0.001531
-3                    SVR  0.032752  0.864978           0.002296
+               Regressor       MSE        R2  Training Time (s)</br>
+0       LinearRegression  0.029111  0.879987           0.000559</br>
+1  RandomForestRegressor  0.020214  0.916668           0.037138</br>
+2               Pipeline  0.519156 -1.140244           0.001531</br>
+3                    SVR  0.032752  0.864978           0.002296</br>
 
 Classifiers:
 Accuracy: 0.97
-<p>Voter Classifer has a accuracy of 97%, able to predict correctly 97% of the time</p>
+<p>Voter Classifier has a accuracy of 97%, able to predict correctly 97% of the time</p>
 
-Classification Report:
-              precision    recall  f1-score   support
+Classification Report:</br>
+              precision    recall  f1-score   support</br>
 
            0       0.94      1.00      0.97        17
            1       1.00      0.92      0.96        12
@@ -181,19 +186,19 @@ Classification Report:
 weighted avg       0.97      0.97      0.97        29
 
 
-Confusion Matrix:
-[[17  0]
- [ 1 11]]
-               Classifier  Accuracy  Precision    Recall  Training Time (s)
-0      LogisticRegression  0.965517   0.967433  0.965517           0.001508
-1  RandomForestClassifier  0.965517   0.967433  0.965517           0.043153
-2  DecisionTreeClassifier  1.000000   1.000000  1.000000           0.000567
-3                     SVC  0.965517   0.967433  0.965517           0.000832
+Confusion Matrix:</br>
+[[17  0]</br>
+ [ 1 11]]</br>
+               Classifier  Accuracy  Precision    Recall  Training Time (s)</br>
+0      LogisticRegression  0.965517   0.967433  0.965517           0.001508</br>
+1  RandomForestClassifier  0.965517   0.967433  0.965517           0.043153</br>
+2  DecisionTreeClassifier  1.000000   1.000000  1.000000           0.000567</br>
+3                     SVC  0.965517   0.967433  0.965517           0.000832</br>
 
 <p> I have also performed time calculations on these models, Random Forest Regressor and Decision tree classifier are the better models with less time and close to actual values in predictions </p>
 
 ### Deep Learning
-<p> I have applied Sequential and LSTM networks, LSTM performed better with MSE 0% with 98% of explainablity of variance.</p>
+<p> I have applied Sequential and LSTM networks, LSTM performed better with MSE 0% with 98% of explainable of variance.</p>
 
 ### Winner: 
 <p> LSTM and Logistic Regression are the best models for predicting the divorce close to 98% of the time with the 10 features that were selected. </p>
@@ -201,16 +206,16 @@ The 10 features are below with answering one of the choice for each question.
 
 All responses were collected on a 5 point scale (0=Never, 1=Seldom, 2=Averagely, 3=Frequently, 4=Always).
 
-1.My spouse and I have similar ideas about how marriage should be
-2.We're just starting a discussion before I know what's going on.
- 3.think that one day in the future, when I look back, I see that my spouse and I have been in harmony with each other
-4.We share the same views about being happy in our life with my spouse
-5.My spouse and I have similar values in trust
-6.My spouse and I have similar ideas about how roles should be in marriage
-7.I know my spouse's hopes and wishes
-8.I know my spouse's basic anxieties
-9.I can be humiliating when we discussions
-10.Most of our goals for people (children, friends, etc.) are the same.
+1.My spouse and I have similar ideas about how marriage should be</br>
+2.We're just starting a discussion before I know what's going on.</br>
+ 3.think that one day in the future, when I look back, I see that my spouse and I have been in harmony with each other</br>
+4.We share the same views about being happy in our life with my spouse</br>
+5.My spouse and I have similar values in trust</br>
+6.My spouse and I have similar ideas about how roles should be in marriage</br>
+7.I know my spouse's hopes and wishes</br>
+8.I know my spouse's basic anxieties</br>
+9.I can be humiliating when we discussions</br>
+10.Most of our goals for people (children, friends, etc.) are the same.</br>
 
 
 
