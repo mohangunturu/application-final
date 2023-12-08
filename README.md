@@ -202,7 +202,7 @@ Confusion Matrix:</br>
 
 ### Winner: 
 <p> LSTM and Logistic Regression are the best models for predicting the divorce close to 98% of the time with the 10 features that were selected. </p>
-The 10 features are below with answering one of the choice for each question.
+Below are 10 features. Select one option for each question to attain a predictive accuracy of 98% in predicting divorces using two widely-used and models that we explored out of many algorithms: Logistic Regression and LSTM network.
 
 All responses were collected on a 5 point scale (0=Never, 1=Seldom, 2=Averagely, 3=Frequently, 4=Always).
 
