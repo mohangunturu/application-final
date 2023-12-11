@@ -138,7 +138,7 @@ Classifiers:
 Accuracy: 0.97
 <p>Voter Classifier has a accuracy of 97%, able to predict correctly 97% of the time</p>
 
-CClassification Report:</br>
+Classification Report:</br>
               precision    recall  f1-score   support</br>
 
            0       0.94      1.00      0.97        17</br>
