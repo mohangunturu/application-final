@@ -151,7 +151,7 @@ weighted avg       0.97      0.97      0.97        29</br>
 
 Confusion Matrix:</br>
 [[17  0]
- [ 1 11]]
+ [ 1 11]]</br>
                Classifier  Accuracy  Precision    Recall  Training Time (s)</br>
 0      LogisticRegression  0.965517   0.967433  0.965517           0.002027</br>
 1  RandomForestClassifier  0.965517   0.967433  0.965517           0.042244</br>
