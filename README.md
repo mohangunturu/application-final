@@ -51,12 +51,10 @@ The following steps are performed on this data.
     * Random Forest Classifier method
 5. Modeling
     * Data split for traing and testing
-    * Regression Models
     * Classification Models
     * Cross Validation
     * Grid Search Hyper Parameters Tuning
 6. Ensemble Techniques
-   * Voting Regressor and Multiple Regressors
    * Voting Classifier and Multiple Classifiers
 7. Deep Learning
    * Sequential
@@ -64,14 +62,6 @@ The following steps are performed on this data.
 
 #### Summary and Interpretation of Models:
 * Features: I have applied correlation and Random forest classifier to select the features that compares target variable with all the features. I have picked top 10 features that predicts that explains at least 90% variance. Using these top 10 features, I have analyzed the data with several models and compared the performance.
-### Regression Models
-  * I have applied Linear, Random forest, Polynomial and SV Regression algorithms.
-  ### Results
-    * Mean Squared Error (Linear Regression): 0.029111439108339715
-    * Mean Squared Error (Random Forest Regression): 0.023634482758620692
-    * Polynomial Regression (Degree 3) MSE: 0.4662792904085586
-    * SVR MSE: 0.03277362141855743
-  * To calculate MSE, you take the squared difference between each predicted and actual value, sum these squared differences, and then divide by the number of observations.MSE of zero is a perfect model which predicts all values correct. Random Forest Regressor has low MSE compare to other regression models, MSE of 0.0236 suggests relatively good performance on the training data. The next best model is Linear regression. Polynomial with Degree 3 suggets that model is overfit with Degree 3 with error rate of 46%. This is a bad model with degree 3.
 
 ### Classification Models
   * I have applied Logistic, Random forest, Decision tree and SV Classification algorithms.
@@ -127,14 +117,6 @@ weighted avg       0.97      0.97      0.97        29</p>
 
 
 ### Cross Validation
-
-<p>Regression Results:</p>
-<p>                    Model  R2 (Mean)  R2 (Std)</br>
-0         Linear Regression   0.918330  0.018782</br>
-1  Random Forest Regression   0.921108  0.054572</br>
-2     Polynomial Regression   0.711600  0.120574</br>
-3            SVR Regression   0.907840  0.026842</p>
-Random Forest is able to explain 92% of variance, and it has lowest standard deviation suggests the model is better than all other regressions.
 <p>Classification Results:</br>
 Model  Accuracy (Mean)  Accuracy (Std)</br>
 0  Logistic Regression Classification         0.982609        0.021300</br>
@@ -146,26 +128,12 @@ Model  Accuracy (Mean)  Accuracy (Std)</br>
 
 ### Grid Search Hyper Parameters Tuning
 There are several paramters that were tried and finally, the best parameters for both regression and classifications are below.
-<p>Best Hyperparameters (Linear Regression): {'fit_intercept': True}</br>
-Best Hyperparameters (Random Forest Regression): {'max_depth': 20, 'n_estimators': 200}</br>
-Best Hyperparameters (Polynomial Regression): {'max_depth': 20, 'n_estimators': 200}</br>
-Best Hyperparameters (SVR Regression): {'max_depth': 20, 'n_estimators': 200}</br>
-Best Hyperparameters (Logistic Regression): {'C': 1}</br>
+<p>Best Hyperparameters (Logistic Regression): {'C': 1}</br>
 Best Hyperparameters (Random Forest Classification): {'max_depth': None, 'n_estimators': 50}</br>
 Best Hyperparameters (Decision Tree Classification): {'criterion': 'gini', 'max_depth': None, 'min_samples_leaf': 4, 'min_samples_split': 5}</br>
 Best Hyperparameters (SVC Classification): {'C': 0.1, 'degree': 2, 'gamma': 'auto', 'kernel': 'rbf'}</p>
 
 ### Ensemble Techniques
-Regressors:
-Mean Squared Error (MSE): 0.07
-R-squared (R2): 0.73
-<p>Voter Regressor has a MSE of 7% with 73% of explained variance</p>
-               Regressor       MSE        R2  Training Time (s)</br>
-0       LinearRegression  0.029111  0.879987           0.000559</br>
-1  RandomForestRegressor  0.020214  0.916668           0.037138</br>
-2               Pipeline  0.519156 -1.140244           0.001531</br>
-3                    SVR  0.032752  0.864978           0.002296</br>
-
 Classifiers:
 Accuracy: 0.97
 <p>Voter Classifier has a accuracy of 97%, able to predict correctly 97% of the time</p>
