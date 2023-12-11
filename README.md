@@ -27,7 +27,7 @@ This the dataset that was collected from Kaggle from the the below url.
 https://www.kaggle.com/datasets/andrewmvd/divorce-prediction
 
 ### Methodology
-I have used data exploration, data analysis, data cleaning, visualizations, handling missing and duplicate values, splitting the train and test data, and finally modeling by using regression models and classification models.
+I have used data exploration, data analysis, data cleaning, visualizations, handling missing and duplicate values, splitting the train and test data, and finally modeling by using classification and deep learning models.
 
 #### Outline of project
 The following steps are performed on this data.
@@ -158,7 +158,7 @@ Confusion Matrix:</br>
 2  DecisionTreeClassifier  1.000000   1.000000  1.000000           0.000567</br>
 3                     SVC  0.965517   0.967433  0.965517           0.000832</br>
 
-<p> I have also performed time calculations on these models, Random Forest Regressor and Decision tree classifier are the better models with less time and close to actual values in predictions </p>
+<p> I have also performed time calculations on these models, Random Forest classifier and Decision tree classifier are the better models with less time and close to actual values in predictions </p>
 
 ### Deep Learning
 <p> I have applied Sequential and LSTM networks, LSTM performed better with MSE 0% with more than 99% of explainable of variance. This network 3 layers, 243 neurons and, 27049 parameters.</p>
