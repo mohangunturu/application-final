@@ -130,7 +130,7 @@ Model  Accuracy (Mean)  Accuracy (Std)</br>
 There are several paramters that were tried and finally, the best parameters for both regression and classifications are below.
 <p>Best Hyperparameters (Logistic Regression): {'C': 1}</br>
 Best Hyperparameters (Random Forest Classification): {'max_depth': None, 'n_estimators': 50}</br>
-Best Hyperparameters (Decision Tree Classification): {'criterion': 'gini', 'max_depth': None, 'min_samples_leaf': 4, 'min_samples_split': 5}</br>
+Best Hyperparameters (Decision Tree Classification): {'criterion': 'gini', 'max_depth': None, 'min_samples_leaf': 1, 'min_samples_split': 2}</br>
 Best Hyperparameters (SVC Classification): {'C': 0.1, 'degree': 2, 'gamma': 'auto', 'kernel': 'rbf'}</p>
 
 ### Ensemble Techniques
@@ -138,33 +138,32 @@ Classifiers:
 Accuracy: 0.97
 <p>Voter Classifier has a accuracy of 97%, able to predict correctly 97% of the time</p>
 
-Classification Report:</br>
+CClassification Report:</br>
               precision    recall  f1-score   support</br>
 
-           0       0.94      1.00      0.97        17
-           1       1.00      0.92      0.96        12
+           0       0.94      1.00      0.97        17</br>
+           1       1.00      0.92      0.96        12</br>
 
-    accuracy                           0.97        29
-   macro avg       0.97      0.96      0.96        29
-weighted avg       0.97      0.97      0.97        29
+    accuracy                           0.97        29</br>
+   macro avg       0.97      0.96      0.96        29</br>
+weighted avg       0.97      0.97      0.97        29</br>
 
 
 Confusion Matrix:</br>
-[[17  0]</br>
- [ 1 11]]</br>
+[[17  0]
+ [ 1 11]]
                Classifier  Accuracy  Precision    Recall  Training Time (s)</br>
-0      LogisticRegression  0.965517   0.967433  0.965517           0.001508</br>
-1  RandomForestClassifier  0.965517   0.967433  0.965517           0.043153</br>
-2  DecisionTreeClassifier  1.000000   1.000000  1.000000           0.000567</br>
-3                     SVC  0.965517   0.967433  0.965517           0.000832</br>
-
-<p> I have also performed time calculations on these models, Random Forest classifier and Decision tree classifier are the better models with less time and close to actual values in predictions </p>
+0      LogisticRegression  0.965517   0.967433  0.965517           0.002027</br>
+1  RandomForestClassifier  0.965517   0.967433  0.965517           0.042244</br>
+2  DecisionTreeClassifier  1.000000   1.000000  1.000000           0.000637</br>
+3                     SVC  0.965517   0.967433  0.965517           0.000804</br>
+<p> I have also performed time calculations on these models, Logistic regression aand SVC classifiers are the better models with less time and close to actual values in predictions </p>
 
 ### Deep Learning
 <p> I have applied Sequential and LSTM networks, LSTM performed better with MSE 0% with more than 99% of explainable of variance. This network 3 layers, 243 neurons and, 27049 parameters.</p>
-1/1 [==============================] - 0s 56ms/step
+1/1 [==============================] - 0s 57ms/step
 Mean Squared Error (MSE): 0.00
-R-squared (R2): 0.99
+R-squared (R2): 0.98
 Model: "sequential_1"
 _________________________________________________________________
  Layer (type)                Output Shape              Param #   
@@ -181,9 +180,10 @@ _________________________________________________________________
 Total params: 27049 (105.66 KB)
 Trainable params: 27049 (105.66 KB)
 Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________
 
 ### Results: 
-<p> LSTM and Logistic Regression are the best models for predicting the divorce close to 98% of the time with the 10 features that were selected. </p>
+<p> LSTM , SVC,and Logistic Regression are the best models for predicting the divorce close to 98% of the time with the 10 features that were selected. </p>
 Below are 10 features. Select one option for each question to attain a predictive accuracy of 98% in predicting divorces using two widely-used and models that we explored out of many algorithms: Logistic Regression and LSTM network.
 
 All responses were collected on a 5 point scale (0=Never, 1=Seldom, 2=Averagely, 3=Frequently, 4=Always).
